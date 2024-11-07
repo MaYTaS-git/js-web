@@ -39,9 +39,9 @@ const make_entry = (disp_card, system_card, opt, result) => {
 	// match_sessions[session][streak] = [disp_card, system_card, opt, result];
 
 	let record = document.getElementById("history-record");
-    if (streak >= 20){
-        record.firstChild.remove()
-    }
+	if (streak >= 20) {
+		record.firstChild.remove();
+	}
 	let div = document.createElement("div");
 
 	if (result) {
@@ -104,8 +104,6 @@ start_btn.addEventListener("click", () => {
 	streak_container.innerText = streak;
 	let record = document.getElementById("history-record");
 	record.innerHTML = "";
-
-	console.log("game started.");
 });
 
 stop_btn.addEventListener("click", () => {
@@ -120,8 +118,6 @@ stop_btn.addEventListener("click", () => {
 
 	stop_btn.toggleAttribute("disabled");
 	stop_btn.classList.toggle("dim-col");
-
-	console.log("game stoped.");
 });
 
 // events listeners - hi and lo
@@ -139,7 +135,6 @@ hi_btn.addEventListener("click", () => {
 		[sys_card_num, sys_card] = card_generator();
 	} else {
 		make_entry(display_card_num, sys_card_num, "hi", false);
-		console.log(match_sessions[session]);
 
 		display_card = sys_card;
 		display_card_num = sys_card_num;
@@ -165,7 +160,6 @@ lo_btn.addEventListener("click", () => {
 		[sys_card_num, sys_card] = card_generator();
 	} else {
 		make_entry(display_card_num, sys_card_num, "hi", false);
-		console.log(match_sessions[session]);
 
 		display_card = sys_card;
 		display_card_num = sys_card_num;
