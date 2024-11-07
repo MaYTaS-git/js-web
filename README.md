@@ -2,7 +2,7 @@
 
 a simple high-low game made with html, css and js.
 
-(CHeck the project in working)[https://maytas-git.github.io/js-web/]
+[CHeck the project in working](https://maytas-git.github.io/js-web/)
 
 ### First clone this repo
 
