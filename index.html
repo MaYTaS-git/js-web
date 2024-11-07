@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+
+		<title>JS Project</title>
+	</head>
+
+	<body>
+		<div class="hilo-game">
+			<div class="head-streak">
+				<h1>Hi-Lo Game</h1>
+
+				<!-- streak display container -->
+
+				<div class="streak-container">
+					Streak:
+					<p id="streak-container-value">0</p>
+				</div>
+			</div>
+
+			<!-- main game container -->
+			<div class="main-container">
+				<!-- gameplay container -->
+				<div class="gameplay-container">
+					<!-- showCard object container -->
+					<div class="show-card-container">
+						<div id="show-card-object">
+							<p class="col-red" id="card-value-text">A</p>
+						</div>
+					</div>
+
+					<!-- Option buttons container -->
+					<div class="option-container">
+						<button
+							id="high-button"
+							class="option-button dim-col"
+							disabled
+						>
+							High
+						</button>
+						<button
+							id="low-button"
+							class="option-button dim-col"
+							disabled
+						>
+							Low
+						</button>
+					</div>
+					<div id="history">
+						<h2 id="history-heading">Round History</h2>
+						<div id="history-record"></div>
+					</div>
+				</div>
+
+				<!-- game start button container -->
+				<div class="start-game-container">
+					<button id="start-button" class="game-button">start</button>
+					<button
+						id="stop-button"
+						class="game-button dim-col"
+						disabled
+					>
+						stop
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

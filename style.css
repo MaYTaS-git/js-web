@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Containers styling */
+
+/* hilo container div */
+.hilo-game {
+    width: 100%;
+    background-color: rgb(19, 19, 19);
+    color: whitesmoke;
+}
+
+/* main container styling */
+.main-container {
+    height: 36.1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* gameplay container */
+.gameplay-container {
+    display: flex;
+    width: 100%;
+    height: 10rem;
+}
+
+/* showCard container */
+.show-card-container {
+    margin-left: 10%;
+    width: 25%;
+}
+
+
+
+/* streak container */
+.streak-container {
+    /* container properties */
+    height: 5rem;
+    width: 100%;
+
+    /* flexbox properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* font-styling */
+    font-size: 2rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.streak-container p {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    margin-right: 90%;
+
+}
+
+/* option container */
+.option-container {
+    height: 20rem;
+    width: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 5rem;
+    margin-right: 15rem;
+}
+
+/* option button */
+.option-button {
+    width: 100%;
+    height: 30%;
+    border-radius: 1rem;
+    color: aliceblue;
+    font-size: 2rem;
+    background-color: rgb(103, 138, 51);
+    /* transition: all 1s linear 0ms; */
+}
+
+/* 
+.option-button:hover {
+    font-size: 2.2rem;
+} */
+
+/* start game container */
+.start-game-container {
+    height: 25%;
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+/* game button  */
+.game-button {
+    border-radius: 2rem;
+    height: 5rem;
+    width: 10rem;
+    font-size: 2rem;
+    color: white;
+}
+
+#start-button {
+    background-color: rgb(103, 138, 51);
+}
+
+#stop-button {
+    margin-left: 2rem;
+    background-color: rgb(138, 51, 51);
+}
+
+/* objects styling */
+#show-card-object {
+    /* container properties */
+    height: 20rem;
+    width: 15rem;
+    background-color: rgb(193, 193, 193);
+    border-radius: 1rem;
+
+    /* flexbox properties */
+    border: 1px solid rgb(182, 182, 182);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-value-text {
+    font-size: 6rem;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+
+/* card colors */
+.col-red {
+    color: red;
+}
+
+.col-black {
+    color: black;
+}
+
+/* dim color */
+.dim-col {
+    filter: brightness(0.5);
+}
+
+/* history */
+
+/* history container */
+#history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 1rem;
+}
+
+#history-heading {
+    color: beige;
+    height: 2.5rem;
+    background-color: rgb(53, 53, 53);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    filter: drop-shadow();
+}
+
+#history-record {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.win-history {
+    color: whitesmoke;
+    background-color: rgb(103, 138, 51);
+    height: 3rem;
+    width: 20%;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    margin-right: 0.3rem;
+    filter: brightness(0.9);
+}
+
+.lose-history {
+    color: whitesmoke;
+    background-color: rgb(138, 51, 51);
+    height: 3rem;
+    width: 20%;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    margin-right: 0.3rem;
+    filter: brightness(0.8);
+}
+
+.win-history:hover {
+    filter: brightness(1);
+}
+
+.lose-history:hover {
+    filter: brightness(1);
+}
