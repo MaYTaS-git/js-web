@@ -159,7 +159,7 @@ lo_btn.addEventListener("click", () => {
 
 		[sys_card_num, sys_card] = card_generator();
 	} else {
-		make_entry(display_card_num, sys_card_num, "hi", false);
+		make_entry(display_card_num, sys_card_num, "lo", false);
 
 		display_card = sys_card;
 		display_card_num = sys_card_num;
