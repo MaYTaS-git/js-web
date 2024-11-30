@@ -1,5 +1,3 @@
-// hi-lo game
-
 const deck = {
 	1: "A",
 	2: "2",
@@ -36,8 +34,6 @@ const card_generator = () => {
 };
 
 const make_entry = (disp_card, system_card, opt, result) => {
-	// match_sessions[session][streak] = [disp_card, system_card, opt, result];
-
 	let record = document.getElementById("history-record");
 	if (streak >= 20) {
 		record.firstChild.remove();
