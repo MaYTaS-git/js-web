@@ -43,12 +43,16 @@ const make_entry = (disp_card, system_card, opt, result) => {
 		record.firstChild.remove();
 	}
 	let div = document.createElement("div");
+	div.classList.add("btn");
 
 	if (result) {
-		div.classList.add("win-history");
+		div.classList.add("btn-outline-success");
 	} else {
-		div.classList.add("lose-history");
+		div.classList.add("btn-outline-danger");
 	}
+
+	div.classList.add("mx-1");
+	div.classList.add("my-1");
 
 	if (opt == "hi") {
 		opt = "↑";
@@ -56,8 +60,8 @@ const make_entry = (disp_card, system_card, opt, result) => {
 		opt = "↓";
 	}
 
-	let text = `<p>${deck[disp_card]} <b class="bold">${opt}</b> ${deck[system_card]}</p>`;
-	div.innerHTML += text;
+	let text = `${deck[disp_card]} ${opt} ${deck[system_card]}`;
+	div.innerHTML = text;
 	record.appendChild(div);
 };
 
@@ -77,7 +81,7 @@ let stop_btn = document.getElementById("stop-button");
 
 // streak container value
 let streak_container = document.getElementById("streak-container-value");
-streak_container.innerText = streak;
+streak_container.innerText = `Streak: ${streak}`;
 
 // card value text ...displayed card's value
 let card_container = document.getElementById("card-value-text");
@@ -86,38 +90,24 @@ card_container.innerText = display_card;
 // events listeners - start and stop
 start_btn.addEventListener("click", () => {
 	hi_btn.toggleAttribute("disabled");
-	hi_btn.classList.toggle("dim-col");
-
 	lo_btn.toggleAttribute("disabled");
-	lo_btn.classList.toggle("dim-col");
-
 	start_btn.toggleAttribute("disabled");
-	start_btn.classList.toggle("dim-col");
-
 	stop_btn.toggleAttribute("disabled");
-	stop_btn.classList.toggle("dim-col");
 
 	streak = 0;
 	session += 1;
 	match_sessions[session] = [];
 
-	streak_container.innerText = streak;
+	streak_container.innerText = `Streak: ${streak}`;
 	let record = document.getElementById("history-record");
 	record.innerHTML = "";
 });
 
 stop_btn.addEventListener("click", () => {
 	hi_btn.toggleAttribute("disabled");
-	hi_btn.classList.toggle("dim-col");
-
 	lo_btn.toggleAttribute("disabled");
-	lo_btn.classList.toggle("dim-col");
-
 	start_btn.toggleAttribute("disabled");
-	start_btn.classList.toggle("dim-col");
-
 	stop_btn.toggleAttribute("disabled");
-	stop_btn.classList.toggle("dim-col");
 });
 
 // events listeners - hi and lo
@@ -126,7 +116,7 @@ hi_btn.addEventListener("click", () => {
 		// display new card
 		make_entry(display_card_num, sys_card_num, "hi", true);
 		streak += 1;
-		streak_container.innerText = streak;
+		streak_container.innerText = `Streak: ${streak}`;
 
 		display_card = sys_card;
 		display_card_num = sys_card_num;
@@ -151,7 +141,7 @@ lo_btn.addEventListener("click", () => {
 		// display new card
 		make_entry(display_card_num, sys_card_num, "lo", true);
 		streak += 1;
-		streak_container.innerText = streak;
+		streak_container.innerText = `Streak: ${streak}`;
 
 		display_card = sys_card;
 		display_card_num = sys_card_num;
